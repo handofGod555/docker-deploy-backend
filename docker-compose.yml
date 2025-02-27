@@ -1,0 +1,10 @@
+version: '3.3'
+
+services:
+  backend:
+    image: awesomekid/234-deploylab-backend:latest
+    pull_policy: always
+    ports:
+      - "8085:8080"
+    environment:
+      - JAVA_PROFILE=prod
