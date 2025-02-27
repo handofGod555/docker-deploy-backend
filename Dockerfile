@@ -19,8 +19,4 @@ COPY ${DEPENDENCY}/META-INF /app/META-INF
 COPY ${DEPENDENCY}/BOOT-INF/classes /app
 
 # Define the entry point to run the Spring Boot application
-ENTRYPOINT ["java", 
-  "-Dspring.profiles.active=${JAVA_PROFILE}",
-  "-cp", "app:app/lib/*",
-  "camt.se234.lab10.Lab10Application"
-]
+ENTRYPOINT ["java", "-Dspring.profiles.active=${JAVA_PROFILE}", "-cp", "app:app/lib/*", "camt.se234.lab10.Lab10Application"]
